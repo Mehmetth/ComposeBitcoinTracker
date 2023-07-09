@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">ComposeBitcoinTracker</string>
+    <string name="bitcoin_list">Bitcoin List</string>
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
 </resources>
