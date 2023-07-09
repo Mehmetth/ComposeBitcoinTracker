@@ -2,4 +2,10 @@
     <string name="bitcoin_list">Bitcoin List</string>
     <string name="favorite">Favorite</string>
     <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="less">Less</string>
+
+    <string name="highest">24h Highest</string>
+    <string name="lowest">24h Lowest</string>
+    <string name="change">24h Change</string>
 </resources>
