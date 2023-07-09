@@ -36,7 +36,9 @@ private fun BitcoinFavoriteScreen(
     onViewEvent: (BitcoinFavoriteEvent) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(Color.Magenta))
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(Color.Magenta)
+    )
 }

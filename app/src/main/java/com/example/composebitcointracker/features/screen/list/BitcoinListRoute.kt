@@ -1,14 +1,20 @@
 package com.example.composebitcointracker.features.screen.list
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.composebitcointracker.R
+import com.example.composebitcointracker.features.component.BitcoinTrackerLoadingContent
+import com.example.composebitcointracker.features.component.BitcoinTrackerSearchBar
 
 @Composable
 fun BitcoinListRoute(
@@ -37,7 +43,22 @@ private fun BitcoinListScreen(
     onViewEvent: (BitcoinListEvent) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(modifier = modifier
-        .fillMaxSize()
-        .background(Color.Blue))
+    Column(modifier = modifier) {
+        BitcoinTrackerSearchBar(
+            placeholder = stringResource(R.string.search),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(70.dp)
+                .padding(10.dp),
+            onTextChange = {
+                onViewEvent(BitcoinListEvent.OnSearchUser(it))
+            }
+        )
+        BitcoinTrackerLoadingContent(
+            isLoading = viewState.isLoading,
+            modifier = Modifier.fillMaxSize()
+        ) {
+
+        }
+    }
 }

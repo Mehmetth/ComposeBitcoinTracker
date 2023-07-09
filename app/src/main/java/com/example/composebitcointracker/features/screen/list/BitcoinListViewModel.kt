@@ -15,14 +15,20 @@ class BitcoinListViewModel @Inject constructor(
 
     override fun handleEvents(event: BitcoinListEvent) {
         when (event) {
-            else -> {}
+            is BitcoinListEvent.OnSearchUser -> {
+                if (event.searchQuery.length > 2) {
+                    setState(BitcoinListState().copy(isLoading = true))
+                } else {
+                    setState(BitcoinListState().copy(isLoading = false))
+                }
+            }
         }
     }
 }
 
 
 data class BitcoinListState(
-    val isLoading: Boolean = true,
+    val isLoading: Boolean = false,
 ) : IState
 
 sealed interface BitcoinListEffect : IEffect {
@@ -30,4 +36,6 @@ sealed interface BitcoinListEffect : IEffect {
 }
 
 sealed interface BitcoinListEvent : IEvent {
+    data class OnSearchUser(val searchQuery: String) :
+        BitcoinListEvent
 }
