@@ -44,7 +44,7 @@ fun NavGraph() {
                 navController.navigateToCoinDetail(it)
             }
             coinDetailScreen()
-            favoriteScreen()
+            coinFavoriteScreen()
         }
     }
 }

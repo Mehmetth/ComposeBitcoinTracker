@@ -26,7 +26,8 @@ fun NavController.navigateToCoinDetail(coinId: String, navOptions: NavOptions? =
 
 @OptIn(ExperimentalAnimationApi::class)
 fun NavGraphBuilder.coinDetailScreen() {
-    composable(route = coinDetailNavigationRoute,
+    composable(
+        route = coinDetailNavigationRoute.plus("/{$coinIdArg}"),
         arguments = listOf(
             navArgument(coinIdArg) { type = NavType.StringType }
         )) {

@@ -16,7 +16,7 @@ fun NavController.navigateFavorite(
 }
 
 @OptIn(ExperimentalAnimationApi::class)
-fun NavGraphBuilder.favoriteScreen() {
+fun NavGraphBuilder.coinFavoriteScreen() {
     composable(route = favoriteNavigationRoute) {
         CoinFavoriteRoute()
     }
