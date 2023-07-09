@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
-        android:name=".app.ComposeBitcoinTracker"
+        android:name=".app.ComposeCoinTracker"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,12 +15,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ComposeBitcoinTracker"
+        android:theme="@style/Theme.ComposeCoinTracker"
         tools:targetApi="31">
         <activity
             android:name=".features.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.ComposeBitcoinTracker">
+            android:theme="@style/Theme.ComposeCoinTracker">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

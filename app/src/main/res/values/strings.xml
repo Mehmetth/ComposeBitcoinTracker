@@ -1,5 +1,5 @@
 <resources>
-    <string name="bitcoin_list">Bitcoin List</string>
+    <string name="coin_list">Coin List</string>
     <string name="favorite">Favorite</string>
     <string name="search">Search</string>
     <string name="more">More</string>

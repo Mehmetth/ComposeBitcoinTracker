@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.composebitcointracker"
+    namespace = "com.example.composecointracker"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.composebitcointracker"
+        applicationId = "com.example.composecointracker"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
@@ -46,14 +46,14 @@ android {
         }
         create("live") {
             dimension = "env"
-            applicationId = "com.example.composebitcointracker"
-            resValue("string", "app_name", "Bitcoin Tracker Compose")
+            applicationId = "com.example.composecointracker"
+            resValue("string", "app_name", "Coin Tracker Compose")
             buildConfigField("String", "BASE_URL", "\"https://api.coingecko.com/api/v3/coins/\"")
         }
         create("dev") {
             dimension = "env"
-            applicationId = "com.example.composebitcointracker.beta"
-            resValue("string", "app_name", "Bitcoin Tracker Compose - BETA")
+            applicationId = "com.example.composecointracker.beta"
+            resValue("string", "app_name", "Coin Tracker Compose - BETA")
             buildConfigField("String", "BASE_URL", "\"https://api.coingecko.com/api/v3/coins/\"")
         }
     }
