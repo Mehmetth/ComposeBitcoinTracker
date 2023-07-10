@@ -11,7 +11,8 @@ data class CoinDetail(
     var hashing_algorithm: String?,
     var image: Image?,
     var description: Description?,
-    var market_data: MarketData?
+    var market_data: MarketData?,
+    var genesis_date: String?
 )
 
 @Stable
